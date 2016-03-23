@@ -11,9 +11,9 @@ import Cocoa
 class CircleIndicatorView: NSView {
     
     var currentValue : CGFloat = 0;
-    var sk = StyleKit()
+    var styleKit = StyleKit()
     
     override func drawRect(dirtyRect: NSRect) {
-        sk.drawCircleIndicator(value: currentValue)
+        styleKit.drawCircleIndicator(value: currentValue)
     }
 }

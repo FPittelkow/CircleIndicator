@@ -11,7 +11,7 @@ import Foundation
 
 class ViewController: NSViewController {
     
-    @IBOutlet weak var sldr: NSSlider!
+    @IBOutlet weak var slider: NSSlider!
     @IBOutlet weak var circleIndicatorView: CircleIndicatorView!
     @IBOutlet weak var Label: NSTextField!
     
@@ -21,15 +21,15 @@ class ViewController: NSViewController {
     }
     
     override func viewDidLoad() {
-        // Set slider to zero postion, redraw canvas, set labe value.
+
         super.viewDidLoad()
-        sldr.integerValue = 0
-        setCanvas()
-        setPercLabel(sldr.doubleValue)
+
+        slider.integerValue = 0
+        drawCanvas()
+        setPercLabel(slider.doubleValue)
     }
 
     func setPercLabel(n: Double) -> Void {
-        // Set label to percentage balue with a pattern like "00.0 %
         
         let percValue = round(n * 100)
 
@@ -41,15 +41,14 @@ class ViewController: NSViewController {
         }
     }
     
-    func setCanvas() {
+    func drawCanvas() {
         // Draw the canvas
-        circleIndicatorView.currentValue = CGFloat(sldr.floatValue)
+        circleIndicatorView.currentValue = CGFloat(slider.floatValue)
         circleIndicatorView.needsDisplay = true
     }
     
     @IBAction func SldrDidChangeValue(sender: NSSlider) {
-        setCanvas()
-        setPercLabel(sldr.doubleValue)
+        drawCanvas()
+        setPercLabel(slider.doubleValue)
     }
-    
 }

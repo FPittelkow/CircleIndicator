@@ -155,13 +155,9 @@ AAAAAAEGA
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="CV" destination="Z5q-gt-rka" id="L8m-JB-74v"/>
-                        <outlet property="GaugeView" destination="Z5q-gt-rka" id="H4B-wY-9jK"/>
                         <outlet property="Label" destination="jSU-Zg-3Vn" id="VS9-m3-hY3"/>
                         <outlet property="circleIndicatorView" destination="Z5q-gt-rka" id="K9h-cU-44I"/>
-                        <outlet property="gaugeView" destination="Z5q-gt-rka" id="WPR-Ey-65Z"/>
-                        <outlet property="sldr" destination="yOf-Gr-wzb" id="Wyx-xN-5PS"/>
-                        <outlet property="vdc" destination="yOf-Gr-wzb" id="eis-4y-Jum"/>
+                        <outlet property="slider" destination="yOf-Gr-wzb" id="7pb-Fp-63S"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
